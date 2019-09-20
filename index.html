@@ -156,6 +156,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-axios奇怪的报错信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/09/19/axios奇怪的报错信息/">axios奇怪的报错信息</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2019/09/19/axios奇怪的报错信息/" class="archive-article-date">
+  	<time datetime="2019-09-19T07:33:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>axios 使用报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import axios from &apos;axios&apos;</span><br><span class="line"></span><br><span class="line">Vue.use(axios)</span><br></pre></td></tr></table></figure>
+
+<p>报错信息：</p>
+<blockquote>
+<p>isURLSameOrigin.js?cf95:57 Uncaught (in promise) TypeError: Cannot<br>read property ‘protocol’ of undefined</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; at isURLSameOrigin (eval at &lt;anonymous&gt; (app.js:929), &lt;anonymous&gt;:57:21)</span><br><span class="line">&gt; at dispatchXhrRequest (eval at &lt;anonymous&gt; (app.js:754), &lt;anonymous&gt;:108:50)</span><br><span class="line">&gt; at Promise (&lt;anonymous&gt;)</span><br><span class="line">&gt; at xhrAdapter (eval at &lt;anonymous&gt; (app.js:754), &lt;anonymous&gt;:12:10)</span><br><span class="line">&gt; at dispatchRequest (eval at &lt;anonymous&gt; (app.js:866), &lt;anonymous&gt;:52:10)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但是改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import axios from &apos;axios&apos;</span><br><span class="line"></span><br><span class="line">Vue.prototype.$ajax = axios</span><br></pre></td></tr></table></figure>
+
+<p>就正常了！！！ 为什么！好奇怪，先存着 以后研究！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2019/09/19/axios奇怪的报错信息/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue创建一个项目2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -195,6 +269,119 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2019/09/19/vue创建一个项目2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue-cli 3.x项目部署到github修改路径方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/09/19/vue-cli 3.x项目部署到github修改路径方法/">vue-cli 3.x 部署到github的方法</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2019/09/19/vue-cli 3.x项目部署到github修改路径方法/" class="archive-article-date">
+  	<time datetime="2019-09-19T03:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天被github的部署郁闷了好久，明明路径什么都没有问题。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$axios(&#123;</span><br><span class="line">      <span class="comment">// url: '/lion/data/'+this.$route.params.name + this.$route.params.lesson + '.json'//发布到github需要修改的地址</span></span><br><span class="line">         url: <span class="string">'/data/'</span>+<span class="keyword">this</span>.$route.params.name + <span class="keyword">this</span>.$route.params.lesson + <span class="string">'.json'</span><span class="comment">//发布到github需要修改的地址</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">this</span>.data = response.data.Result;</span><br><span class="line">                     <span class="built_in">console</span>.log(<span class="keyword">this</span>.url);</span><br><span class="line">                    <span class="comment">// console.log(this.lesson);</span></span><br><span class="line">&#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123; <span class="built_in">console</span>.log(e) &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>Vue.config.js 需要布置为以下参数，我的项目为lion。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line"> 	publicPath: process.env.NODE_ENV === <span class="string">"production"</span> ? <span class="string">"/lion"</span> : <span class="string">"/"</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>一直不停的覆盖昨天的文件，都没有成功，后来把文件全部删除后再重新粘贴上传终于成功了。于是我发现了一个非常小白的错误。vue自动发布都是随机生成的文件，如果不删除就会持续扩大。&gt;&lt;… 真的是太白痴了。</p>
+<p>以下是我参考的博主博客</p>
+<p>vue cli 3.x 项目部署到 github pages的方法<br> 更新时间：2019年04月17日 08:21:15   作者：Steve_Xu    我要评论</p>
+<p>这篇文章主要介绍了vue cli 3.x 项目部署到 github pages的方法，非常不错，具有一定的参考借鉴价值 ,需要的朋友可以参考下<br>github pages 是 github 免费为用户提供的服务，写博客，或者部署一些纯静态项目。</p>
+<p>最近将 vue cli 3.x 初始化项目部署到 github pages，踩了一些坑，记录如下。</p>
+<p><a href="https://github.com/nusr/resume-vue" target="_blank" rel="noopener">https://github.com/nusr/resume-vue</a></p>
+<ol>
+<li>vue-router 不要开启 history 模式</li>
+</ol>
+<p>路径中的 # 比较丑，就开启了 vue-router 的 history 模式，去掉了 #。平时做项目也是默认开启 history 模式。折腾了半天发现，我这是部署到 github pages ，服务器没有配置，导致页面一直请求不到。</p>
+<ol start="2">
+<li>配置 publicUrl</li>
+</ol>
+<p>打包路径也要单独配置，否则也是请求不到页面。</p>
+<p>比如我的项目地址是 <a href="https://github.com/nusr/resume-vue" target="_blank" rel="noopener">https://github.com/nusr/resume-vue</a></p>
+<p>我要部署到 <a href="https://nusr.github.io/resume-vue，那么" target="_blank" rel="noopener">https://nusr.github.io/resume-vue，那么</a> publicPath 要配置为 /resume-vue</p>
+<p>// vue.config.js<br>module.exports = {<br> publicPath: process.env.NODE_ENV === “production” ? “/resume-vue” : “/“<br>};</p>
+<ol start="3">
+<li>css 引入图片错误</li>
+</ol>
+<p>css 引入背景图片时，开发环境没有任何问题，但是一旦部署后，就无法获取图片了。</p>
+<p>稍微改下 App.vue 的代码，暂时解决了这个问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--App.vue--&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line"> &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;router-view /&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line"> name: &quot;App&quot;,</span><br><span class="line"> mounted() &#123;</span><br><span class="line">  /**</span><br><span class="line">   * 解决 css 引入图片在 github pages 无法获取的问题</span><br><span class="line">   */</span><br><span class="line">  const &#123; NODE_ENV &#125; = process.env;</span><br><span class="line">  document.documentElement.className = NODE_ENV;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style lang=&quot;less&quot;&gt;</span><br><span class="line">@import &quot;~@/assets/global.less&quot;;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>给 html 标签配置了一个顶级类，写上不同的 css 解决了这个问题。</p>
+<p>真时的部署环境不是这样的，部署文件夹就是根目录，但 github pages 部署文件夹不是根目录，就有这个问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> // global.less</span><br><span class="line">.development &#123;</span><br><span class="line"> background-image: url(/background.png);</span><br><span class="line">&#125;</span><br><span class="line">.production &#123;</span><br><span class="line"> background-image: url(/resume-vue/background.png)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>自动部署脚本</li>
+</ol>
+<p>根目录下新建 deploy.sh 文件，文件内容如下。</p>
+<h1 id="deploy-sh"><a href="#deploy-sh" class="headerlink" title="deploy.sh"></a>deploy.sh</h1><h1 id="错误时停止"><a href="#错误时停止" class="headerlink" title="错误时停止"></a>错误时停止</h1><p>set -e</p>
+<h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><p>npm run build</p>
+<h1 id="进入目标文件夹"><a href="#进入目标文件夹" class="headerlink" title="进入目标文件夹"></a>进入目标文件夹</h1><p>cd dist</p>
+<h1 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a>提交到本地仓库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &apos;deploy&apos;</span><br></pre></td></tr></table></figure>
+
+<h1 id="提交到-https-github-com-nusr-resume-vue-项目的-gh-pages-分支"><a href="#提交到-https-github-com-nusr-resume-vue-项目的-gh-pages-分支" class="headerlink" title="提交到 https://github.com:nusr/resume-vue 项目的 gh-pages 分支"></a>提交到 <a href="https://github.com:nusr/resume-vue" target="_blank" rel="noopener">https://github.com:nusr/resume-vue</a> 项目的 gh-pages 分支</h1><p>git push -f <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:nusr/resume-vue.git master:gh-pages<br>cd -<br>部署命令是 bash deploy.sh</p>
+<p>开启 github pages</p>
+<p>建立仓库，仓库名称是 username.github.io ,必须是这种格式。</p>
+<p>比如我的用户名是 nusr,建立的仓库就是 nusr.github.io。</p>
+<p>github pages 默认开启分支是 gh-pages,可以进入该仓库页面，点击 Settings -&gt; GitHub Pages,切换展示的分支。</p>
+<p>GitHub Pages 支持定制域名,支持 jsonp 请求。</p>
+<p>参考<br>1.github pages 官方说明</p>
+<p>2.vue cli 3.x 部署官方说明</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2019/09/19/vue-cli 3.x项目部署到github修改路径方法/">展开全文 >></a>
         </p>
       
 

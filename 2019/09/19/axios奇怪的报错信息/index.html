@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wangying86.github.io/blog">
-  <title>Archives | 王颖的技术仓库</title>
+  <title>axios奇怪的报错信息 | 王颖的技术仓库</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="王颖的技术仓库">
-<meta property="og:url" content="https://wangying86.github.io/blog/archives/index.html">
+  <meta name="description" content="axios 使用报错 1234import Vue from &amp;apos;vue&amp;apos;import axios from &amp;apos;axios&amp;apos;Vue.use(axios)  报错信息：  isURLSameOrigin.js?cf95:57 Uncaught (in promise) TypeError: Cannotread property ‘protocol’ of un">
+<meta property="og:type" content="article">
+<meta property="og:title" content="axios奇怪的报错信息">
+<meta property="og:url" content="https://wangying86.github.io/blog/2019/09/19/axios奇怪的报错信息/index.html">
 <meta property="og:site_name" content="王颖的技术仓库">
+<meta property="og:description" content="axios 使用报错 1234import Vue from &amp;apos;vue&amp;apos;import axios from &amp;apos;axios&amp;apos;Vue.use(axios)  报错信息：  isURLSameOrigin.js?cf95:57 Uncaught (in promise) TypeError: Cannotread property ‘protocol’ of un">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-19T07:34:01.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王颖的技术仓库">
+<meta name="twitter:title" content="axios奇怪的报错信息">
+<meta name="twitter:description" content="axios 使用报错 1234import Vue from &amp;apos;vue&amp;apos;import axios from &amp;apos;axios&amp;apos;Vue.use(axios)  报错信息：  isURLSameOrigin.js?cf95:57 Uncaught (in promise) TypeError: Cannotread property ‘protocol’ of un">
   
     <link rel="alternative" href="/atom.xml" title="王颖的技术仓库" type="application/atom+xml">
   
@@ -154,211 +158,146 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-axios奇怪的报错信息" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      axios奇怪的报错信息
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2019/09/19/axios奇怪的报错信息/" class="archive-article-date">
+
+        
+        <a href="/blog/2019/09/19/axios奇怪的报错信息/" class="archive-article-date">
   	<time datetime="2019-09-19T07:33:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/09/19/axios奇怪的报错信息/">axios奇怪的报错信息</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>axios 使用报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import axios from &apos;axios&apos;</span><br><span class="line"></span><br><span class="line">Vue.use(axios)</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>报错信息：</p>
+<blockquote>
+<p>isURLSameOrigin.js?cf95:57 Uncaught (in promise) TypeError: Cannot<br>read property ‘protocol’ of undefined</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; at isURLSameOrigin (eval at &lt;anonymous&gt; (app.js:929), &lt;anonymous&gt;:57:21)</span><br><span class="line">&gt; at dispatchXhrRequest (eval at &lt;anonymous&gt; (app.js:754), &lt;anonymous&gt;:108:50)</span><br><span class="line">&gt; at Promise (&lt;anonymous&gt;)</span><br><span class="line">&gt; at xhrAdapter (eval at &lt;anonymous&gt; (app.js:754), &lt;anonymous&gt;:12:10)</span><br><span class="line">&gt; at dispatchRequest (eval at &lt;anonymous&gt; (app.js:866), &lt;anonymous&gt;:52:10)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但是改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import axios from &apos;axios&apos;</span><br><span class="line"></span><br><span class="line">Vue.prototype.$ajax = axios</span><br></pre></td></tr></table></figure>
 
+<p>就正常了！！！ 为什么！好奇怪，先存着 以后研究！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wangying86.github.io/blog/2019/09/19/axios奇怪的报错信息/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2019/09/19/vue创建一个项目2/" class="archive-article-date">
-  	<time datetime="2019-09-19T03:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2019/09/19/vue创建一个项目2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue创建一个项目2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/09/19/vue创建一个项目2/">vue创建一个项目2</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2019/09/19/vue-cli 3.x项目部署到github修改路径方法/" class="archive-article-date">
-  	<time datetime="2019-09-19T03:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/09/19/vue-cli 3.x项目部署到github修改路径方法/">vue-cli 3.x 部署到github的方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2019/09/19/vue创建一个项目1/" class="archive-article-date">
-  	<time datetime="2019-09-19T03:21:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/09/19/vue创建一个项目1/">vue创建一个项目1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2019/09/19/个人简历/" class="archive-article-date">
-  	<time datetime="2019-09-19T02:43:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/09/19/个人简历/">个人简历</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2019/09/19/Lion的双美英语/" class="archive-article-date">
-  	<time datetime="2019-09-18T16:06:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/09/19/Lion的双美英语/">Lion的双美英语</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2019/09/18/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-18T06:21:13.827Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/09/18/hello-world/">欢迎光临我的博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -381,8 +320,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
